@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 
 public class ArrayBasedStack <T>{
 
-    private static final int BASE_LIMIT = 2;
+    private static final int BASE_LIMIT = 3;
     private int top_marker;
     private T[] storage_box;
 
@@ -55,7 +55,7 @@ public class ArrayBasedStack <T>{
 
     // Peek method
     public T peek() {
-        // 1️⃣ Throws an  exception if stack is empty.........
+        //  Throws an  exception if stack is empty.........
         if (isEmpty()) {
             System.out.println("Stack is empty! Cannot peek.");
             throw new EmptyStackException();
@@ -73,7 +73,7 @@ public class ArrayBasedStack <T>{
 
     // Expand metho
     public void Expand() {
-        storage_box = Arrays.copyOf(storage_box, storage_box.length * 2);
+        storage_box = Arrays.copyOf(storage_box, storage_box.length * 3);
         System.out.println("Stack expanded to size: " + storage_box.length);
     }
 
@@ -99,7 +99,7 @@ public class ArrayBasedStack <T>{
 // MAIN METH
     public static void main(String[] args) {
 
-            // Step 0: Create a stack with initial size 2
+
             ArrayBasedStack<Integer> stack = new ArrayBasedStack<>(3);
 
 
